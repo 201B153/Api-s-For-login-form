@@ -7,6 +7,9 @@ node_modules
 
 ??
 client
+dump.js
+server.js
+AWS-Api.md
 # testing
 /coverage
 
