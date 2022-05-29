@@ -108,7 +108,7 @@ app.post(
   })
 );
 // API to call for Profile 
-userRouter.put(
+app.put(
   '/profile',
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
