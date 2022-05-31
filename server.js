@@ -32,6 +32,7 @@ const users = [
 
 app.get('/', function (req, res) {
   //when we get an http get request to the root/homepage
+  console.log('home private route');
   res.send('Hello World 201b153');
 });
 
@@ -89,6 +90,10 @@ app.use('/api/users', userRouter);
 app.use('/api/otp', otpRouter);
 
 app.post('/home', async (req, res) => {
+  console.log('home private route');
+  res.status(202).send('Private Protected Route - Home');
+});
+app.get('/home', async (req, res) => {
   console.log('home private route');
   res.status(202).send('Private Protected Route - Home');
 });
