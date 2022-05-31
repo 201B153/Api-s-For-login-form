@@ -8,8 +8,11 @@ node_modules
 ??
 client
 dump.js
-server.js
+server1.js
 AWS-Api.md
+amplify
+aws.exports.cjs
+
 # testing
 /coverage
 
