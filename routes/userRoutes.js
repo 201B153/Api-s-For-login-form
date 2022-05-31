@@ -6,11 +6,21 @@ import { generateToken, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
+userRouter.post('/home', async (req, res) => {
+  console.log('Api- Home');
+  res.status(202).send('Private Protected Route - Api- Home');
+});
+userRouter.get('/home', async (req, res) => {
+  console.log('Api- Home');
+  res.status(202).send('Private Protected Route - Api- Home');
+});
+
 userRouter.get(
   '/',
   // isAuth,
   expressAsyncHandler(async (req, res) => {
     const users = await User.find({});
+    console.log('Api- Home');
     res.send(users);
   })
 );

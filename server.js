@@ -63,7 +63,7 @@ app.post('/user', function (req, res) {
   res.send(user);
 });
 
-app.put('/users/:id', function (req, res) {
+app.put('/user/:id', function (req, res) {
   //get the user
   const user = users.find((c) => c.id === parseInt(req.params.id));
   if (!user)
@@ -74,7 +74,7 @@ app.put('/users/:id', function (req, res) {
   res.send(user);
 });
 
-app.put('/users/:id', function (req, res) {
+app.put('/user/:id', function (req, res) {
   //get the user
   const user = courses.find((c) => c.id === parseInt(req.params.id));
   if (!user)
@@ -91,11 +91,11 @@ app.use('/api/otp', otpRouter);
 
 app.post('/home', async (req, res) => {
   console.log('home private route');
-  res.status(202).send('Private Protected Route - Home');
+  res.status(202).send('Private Protected Route - 201b153 Home');
 });
 app.get('/home', async (req, res) => {
   console.log('home private route');
-  res.status(202).send('Private Protected Route - Home');
+  res.status(202).send('Private Protected Route - 201b153 Home');
 });
 
 app.use((err, req, res, next) => {
