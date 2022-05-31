@@ -8,7 +8,7 @@ const userRouter = express.Router();
 
 userRouter.get(
   '/',
-  isAuth,
+  // isAuth,
   expressAsyncHandler(async (req, res) => {
     const users = await User.find({});
     res.send(users);
@@ -17,7 +17,7 @@ userRouter.get(
 
 userRouter.get(
   '/:id',
-  isAuth,
+  // isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -29,7 +29,7 @@ userRouter.get(
 );
 userRouter.put(
   '/:id',
-  isAuth,
+  // isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
@@ -85,7 +85,7 @@ userRouter.post(
 
 userRouter.put(
   '/profile',
-  isAuth,
+  // isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {

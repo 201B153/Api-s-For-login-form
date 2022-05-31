@@ -13,6 +13,7 @@ AWS-Api.md
 amplify
 aws.exports.cjs
 
+seedRoutes.js
 # testing
 /coverage
 
