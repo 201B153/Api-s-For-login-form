@@ -80,7 +80,7 @@ app.put('/user/:id', function (req, res) {
   if (!user)
     return res.status(404).send('The user with the given id was not found');
   //update the user
-  course.name = req.body.name;
+  user.name = req.body.name;
   //returns the updated object
   res.send(user);
 });
