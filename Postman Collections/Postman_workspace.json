@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "0a30a5f9-1da8-4a47-97ad-c09f8fa940e1",
+		"name": "educheck91",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "verifyOTP",
+			"_postman_id": "c4bedee9-b65d-40cb-8512-555150c920c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"session_id\": 1231254324561234943156,\r\n    \"otp\": 123456\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://educheck-server.herokuapp.com/api/otp/verifyOtp"
+			},
+			"response": []
+		},
+		{
+			"name": "sendOTP",
+			"_postman_id": "6eaa7844-75d3-426a-a406-d4c6acd58f5e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer 982rewfdh",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : 6265187023\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8888/sendOTP"
+			},
+			"response": []
+		},
+		{
+			"name": "otp-Home",
+			"_postman_id": "4cd6ad80-cf86-480d-a30e-2c9d08cc441d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://educheck-server.herokuapp.com/api/otp/home"
+			},
+			"response": []
+		},
+		{
+			"name": "users-Home",
+			"_postman_id": "578e3ece-bcf4-4905-b1a0-f0e99bd7d2a8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://educheck-server.herokuapp.com/api/users/home"
+			},
+			"response": []
+		},
+		{
+			"name": "Signup-page",
+			"_postman_id": "ef921427-1f6f-45a4-8311-43a56bea26ab",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"201b153\",\r\n  \"email\": \"admin@test.com\",\r\n  \"password\": \"mayankm698\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://educheck-server.herokuapp.com/api/users/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login-Page",
+			"_postman_id": "dfc66db1-6102-4fa5-b6e5-28598df74727",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@test.com\",\r\n  \"password\": \"mayankm698\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://educheck-server.herokuapp.com/api/users/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile-Page",
+			"_postman_id": "4333ca77-ac8c-4286-9cf4-462f28e01060",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"629615d0f109dd0d6f8f5435\",\r\n    \"email\": \"admin@test.com\",\r\n  \"password\": \"mayankm698\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://educheck-server.herokuapp.com/api/users/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "Home-Page",
+			"_postman_id": "1551d6eb-3fea-426a-8f8b-4280e36241bd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://educheck-server.herokuapp.com/home"
+			},
+			"response": []
+		}
+	]
+}
